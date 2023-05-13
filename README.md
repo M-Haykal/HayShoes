@@ -1,0 +1,2 @@
+# HayShoes
+latihan project pertama
