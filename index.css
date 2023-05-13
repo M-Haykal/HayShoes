@@ -2,7 +2,7 @@
   background-color: #212529;
 }
 
-.bergerak {
+.bergerak, .partner {
   width: auto;
   height: 100%;
   overflow-x: scroll;
