@@ -1,0 +1,53 @@
+.o {
+  background-color: #212529;
+}
+.bergerak {
+  width: auto;
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  background-color: #212529;
+}
+
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+.element-dengan-overflow {
+  overflow-x: hidden;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+}
+
+footer h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 40px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.card {
+  margin-top: 10px;
+}
