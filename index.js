@@ -32,3 +32,14 @@ form.addEventListener("submit", function (e) {
   nameInput.value = "";
   commentInput.value = "";
 });
+
+// function rateProduct(rating) {
+//   // code to send rating to server or update rating in local storage
+//   console.log(`You rated this product ${rating} stars.`);
+// }
+
+// function changeBackground() {
+//   const colors = ["black", "white"];
+//   const randomColor = colors[Math.floor(Math.random() * colors.length)];
+//   document.body.style.backgroundColor = randomColor;
+// }

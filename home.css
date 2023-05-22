@@ -2,3 +2,38 @@
   background-color: #212529;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+main .a {
+  text-decoration: none;
+}
+
+.video-ad {
+  position: relative;
+  width: 200%;
+  max-width: 800px; /* Sesuaikan dengan lebar video Anda */
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  align-content: center;
+}
+
+.video-ad video {
+  width: 100%;
+  height: auto;
+}
+
