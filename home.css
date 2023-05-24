@@ -8,6 +8,11 @@ body {
   padding: 0;
 }
 
+body::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
 h1 {
   margin: 0;
 }
@@ -22,18 +27,8 @@ main .a {
   text-decoration: none;
 }
 
-.video-ad {
-  position: relative;
-  width: 200%;
-  max-width: 800px; /* Sesuaikan dengan lebar video Anda */
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 800px;
-  align-content: center;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.video-ad video {
-  width: 100%;
-  height: auto;
-}
-
