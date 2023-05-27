@@ -33,13 +33,30 @@ form.addEventListener("submit", function (e) {
   commentInput.value = "";
 });
 
-// function rateProduct(rating) {
-//   // code to send rating to server or update rating in local storage
-//   console.log(`You rated this product ${rating} stars.`);
-// }
+const carousel = new bootstrap.Carousel('#carouselExampleCaptions');
 
-// function changeBackground() {
-//   const colors = ["black", "white"];
-//   const randomColor = colors[Math.floor(Math.random() * colors.length)];
-//   document.body.style.backgroundColor = randomColor;
-// }
+const text = "Selamat datang di HayShoes.";
+const typingInterval = 100; // Jeda antara karakter (dalam milidetik)
+const repeatInterval = 200; // Jeda antara setiap pengulangan (dalam milidetik)
+
+function typeText() {
+    const typingText = document.getElementById('typing-text');
+    console.log(typeText.arguments);
+    typingText.innerHTML = '';
+
+    let index = 0;
+
+    function typeNextCharacter() {
+        if (index < text.length) {
+            typingText.innerHTML += text[index];
+            index++;
+            setTimeout(typeNextCharacter, typingInterval);
+        } else {
+            setTimeout(typeText, repeatInterval);
+        }
+    }
+
+    typeNextCharacter();
+}
+
+typeText();
