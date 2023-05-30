@@ -72,3 +72,17 @@ form.form-login {
   color: white;
   text-decoration: none;
 }
+
+.pesan {
+  color: #2b3035;
+}
+
+.btn-home {
+  border: none;
+  border-radius: 20px;
+  background-color: #2b3035;
+  color: #fff;
+  padding: 5px 10px;
+  width: 300px;
+  height: 35px;
+}
