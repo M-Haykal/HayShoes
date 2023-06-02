@@ -92,19 +92,39 @@
 }
 
 .container2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 48px;
+  text-align: center;
   height: 100px;
 }
 
 .container2 span {
-  font-size: 48px;
-  font-weight: bold;
-  color: white;
+  display: inline-block;
+  animation: twinkling 1s infinite;
   transition: transform 0.3s ease-out;
+  border-radius: 2px;
+  border-radius: 5px;
+  margin: 0px;
+  padding: 5px;
 }
 
 .container2:hover span {
   transform: translateY(-10px);
+}
+
+@keyframes twinkling {
+  0% {
+    color: red; 
+  }
+  25% {
+    color: green; 
+  }
+  50% {
+    color: blue; 
+  }
+  75% {
+    color: yellow; 
+  }
+  100% {
+    color: purple;
+  }
 }
