@@ -23,52 +23,89 @@
   </head>
   <body class="o">
     <!-- Navbar -->
-    <nav class="navbar bg-dark sticky-top" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg sticky-top bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
-        <div class="dropdown-center">
-          <button
-            class="btn btn-dark border border-0"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <span class="navbar-brand mb-2 h2"><i class="bi bi-list"></i></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="home.html">Home</a></li>
-            <li><a class="dropdown-item" href="login.html">Logout</a></li>
-            <li>
+        <a class="navbar-brand mb-0 h1" href="portofolio/index.html">HayShoes</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="login.html">Login</a>
+            </li>
+            <li class="nav-item dropdown">
               <a
-                class="dropdown-item"
-                href="https://www.instagram.com/_mhmd_haykall/"
-                >Instagram</a
+                class="nav-link active"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                Media sosial
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://www.instagram.com/_mhmd_haykall/"
+                    ><i class="bi bi-instagram">Instagram</i></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://twitter.com/Hekolll_?s=09"
+                    ><i class="bi bi-twitter">Twitter</i></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://youtube.com/@muhammadhaykal9143"
+                    ><i class="bi bi-youtube">Youtube</i></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://github.com/M-Haykal"
+                    ><i class="bi bi-github">github</i></a
+                  >
+                </li>
+              </ul>
             </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="https://youtube.com/@muhammadhaykal9143"
-                >Youtube</a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://twitter.com/Hekolll_?s=09"
-                >Twitter</a
-              >
-            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li> -->
           </ul>
+          <div class="search-box">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn bg-white text-dark me-2" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+          </div>
         </div>
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn bg-white text-dark me-2" type="submit">
-            Search
-          </button>
-        </form>
       </div>
     </nav>
 

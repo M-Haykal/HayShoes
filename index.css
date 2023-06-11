@@ -92,7 +92,7 @@
 }
 
 .container2 {
-  font-size: 48px;
+  font-size: 50px;
   text-align: center;
   height: 100px;
 }
@@ -108,23 +108,23 @@
 }
 
 .container2:hover span {
-  transform: translateY(-10px);
+  transform: translateY(10px);
 }
 
 @keyframes twinkling {
   0% {
-    color: red; 
+    color: white;
   }
   25% {
-    color: green; 
+    color: #198754;
   }
   50% {
-    color: blue; 
+    color: white;
   }
   75% {
-    color: yellow; 
+    color: #198754;
   }
   100% {
-    color: purple;
+    color: white;
   }
 }
