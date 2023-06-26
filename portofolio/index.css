@@ -42,9 +42,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("bg.jpg");
+  background: url("https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=917&q=80");
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: center;
+  background-size: cover;
+  /* background: url("https://i.pinimg.com/564x/55/7e/99/557e99ef3989940d41de0929687325c5.jpg") no-repeat center cover; */
 }
 
 #home h1 {
