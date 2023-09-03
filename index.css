@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Lobster+Two&family=Lumanosimo&family=Permanent+Marker&family=Russo+One&display=swap");
+
+.navbar-brand {
+  font-family: "Permanent Marker", cursive;
+}
+
 .o {
   background-color: #212529;
 }
@@ -95,6 +101,10 @@
   font-size: 50px;
   text-align: center;
   height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .container2 span {
@@ -105,6 +115,7 @@
   border-radius: 5px;
   margin: 0px;
   padding: 5px;
+  font-size: 50px;
 }
 
 .container2:hover span {
@@ -127,4 +138,40 @@
   100% {
     color: white;
   }
+}
+
+@media (max-width: 600px) {
+  .container2 span {
+    font-size: 3rem;
+  }
+}
+
+.navbar-nav {
+  cursor: pointer;
+}
+
+.navbar-nav:hover a {
+  color: white;
+}
+
+.navbar-nav:hover a:hover {
+  color: #198754;
+  box-shadow: 0 2px 0 currentColor;
+}
+
+/* #searchHistory {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+} */
+
+.offcanvas-end,
+.offcanvas-top {
+  margin-top: 55.5px;
 }

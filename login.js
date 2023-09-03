@@ -4,48 +4,48 @@ function changeColor() {
 }
 
 // Mendapatkan referensi ke elemen formulir
-const loginForm = document.querySelector('.form-login');
+const loginForm = document.querySelector(".form-login");
 
 // Menangani submit form
-loginForm.addEventListener('submit', function(event) {
+loginForm.addEventListener("submit", function (event) {
   event.preventDefault(); // Mencegah pengiriman form
 
   // Mendapatkan nilai input username dan password
-  const usernameInput = document.getElementById('username').value;
-  const passwordInput = document.getElementById('password').value;
+  const usernameInput = document.getElementById("username").value;
+  const passwordInput = document.getElementById("password").value;
 
   // Menyimpan nilai input ke dalam local storage
-  localStorage.setItem('username', usernameInput);
-  localStorage.setItem('password', passwordInput);
+  localStorage.setItem("username", usernameInput);
+  localStorage.setItem("password", passwordInput);
 
   // Menghapus nilai input setelah disimpan
-  document.getElementById('username').value = '';
-  document.getElementById('password').value = '';
+  document.getElementById("username").value = "";
+  document.getElementById("password").value = "";
 
-  const loginDiv = document.querySelector('.login');
-  const loginForm = document.querySelector('.login form');
-  
+  const loginDiv = document.querySelector(".login");
+  const loginForm = document.querySelector(".login form");
+
   // Menghapus form login
-  loginForm.innerHTML = '';
+  loginForm.innerHTML = "";
 
   // Menampilkan hasil login di dalam div dengan kelas "login"
-    var result = document.createElement("div");
-    loginDiv.innerHTML = `<h2>Selamat datang, ${usernameInput}!</h2>
+  var result = document.createElement("div");
+  loginDiv.innerHTML = `<h2>Selamat datang, ${usernameInput}!</h2>
           <p>Ini adalah profil Anda.</p>
           <button class="btn-home" onclick="logout()">Home</button>`;
-    loginDiv.appendChild(result);
+  loginDiv.appendChild(result);
 });
 
 // Mendapatkan nilai username dan password dari local storage
-const storedUsername = localStorage.getItem('username');
-const storedPassword = localStorage.getItem('password');
+const storedUsername = localStorage.getItem("username");
+const storedPassword = localStorage.getItem("password");
 
 // Memeriksa apakah ada nilai username dan password yang tersimpan
 if (storedUsername && storedPassword) {
-  console.log('Username:', storedUsername);
-  console.log('Password:', storedPassword);
+  console.log("Username:", storedUsername);
+  console.log("Password:", storedPassword);
 } else {
-  console.log('Tidak ada data login yang tersimpan.');
+  console.log("Tidak ada data login yang tersimpan.");
 }
 
 // Mendapatkan referensi ke elemen profil
@@ -97,14 +97,33 @@ if (storedUsername && storedPassword) {
 //   }
 // });
 
-
 // Fungsi logout
 function logout() {
   // Menghapus data login dari local storage
-  localStorage.removeItem('username');
-  localStorage.removeItem('password');
+  localStorage.removeItem("username");
+  localStorage.removeItem("password");
 
   // Mengarahkan pengguna kembali ke halaman login
-  window.location.href = 'index.html';
+  window.location.href = "index.html";
 }
 
+function onGoogleScriptLoad() {
+  google.accounts.id.initialize({
+    client_id: "YOUR_CLIENT_ID",
+    callback: handleCredentialResponse,
+  });
+}
+
+function handleCredentialResponse(response) {
+  var credential = response.credential;
+  var email = credential.id;
+  var fullName = credential.displayName;
+  var profilePicture = credential.profilePicture;
+
+  // Menggunakan informasi email, nama lengkap, dan foto profil untuk melakukan proses login ke server Anda
+
+  console.log("Email: " + email);
+  console.log("Nama Lengkap: " + fullName);
+  console.log("Foto Profil: " + profilePicture);
+}
+window.addEventListener("load", onGoogleScriptLoad);

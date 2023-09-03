@@ -1,24 +1,16 @@
-const text = "Selamat datang di HayShoes.";
-const typingInterval = 100; // Jeda antara karakter (dalam milidetik)
-const repeatInterval = 200; // Jeda antara setiap pengulangan (dalam milidetik)
+const scrollButton = document.querySelector("#scrollButton");
 
-function typeText() {
-    const typingText = document.getElementById('typing-text');
-    typingText.innerHTML = '';
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollButton.style.display = "block";
+  } else {
+    scrollButton.style.display = "none";
+  }
+});
 
-    let index = 0;
-
-    function typeNextCharacter() {
-        if (index < text.length) {
-            typingText.innerHTML += text[index];
-            index++;
-            setTimeout(typeNextCharacter, typingInterval);
-        } else {
-            setTimeout(typeText, repeatInterval);
-        }
-    }
-
-    typeNextCharacter();
-}
-
-typeText();
+scrollButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});

@@ -34,3 +34,25 @@ form.addEventListener("submit", function (e) {
 });
 
 const carousel = new bootstrap.Carousel("#carouselExampleCaptions");
+
+// function addToHistory(searchTerm) {
+//   var searchHistory = document.getElementById("searchHistory");
+//   var li = document.createElement("li");
+//   li.appendChild(document.createTextNode(searchTerm));
+//   searchHistory.appendChild(li);
+// }
+
+// // Fungsi untuk melakukan pencarian
+// function search() {
+//   var searchInput = document.getElementById("searchInput");
+//   var searchTerm = searchInput.value;
+
+//   // Menambahkan pencarian ke histori
+//   addToHistory(searchTerm);
+
+//   // Lakukan pencarian, di sini Anda bisa menambahkan logika pencarian sesuai kebutuhan
+//   console.log("Melakukan pencarian: " + searchTerm);
+
+//   // Menghapus nilai input pencarian
+//   searchInput.value = "";
+// }

@@ -1,56 +1,12 @@
-.o {
-  background-color: #212529;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-body::-webkit-scrollbar {
-  width: 0;
-  background-color: transparent;
-}
-
-h1 {
-  margin: 0;
-}
-
-main {
-  padding: 20px;
+/* .jumbotron {
   text-align: center;
-  color: white;
-}
-
-main .a {
-  text-decoration: none;
-}
-
-.container {
-  display: flex;
+  width: 50%;
+  height: 100%;
   align-items: center;
   justify-content: center;
-}
-
-@keyframes typing {
-  from { width: 0; }
-}
-
-#typing-text {
-  animation: typing 3s steps(30, end);
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid black;
-  width: fit-content;
-  margin: 0 auto;
-  color: white;
-}
-
-.container2{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
   text-align: center;
 }
+
+.button {
+  margin-top: 20px;
+} */

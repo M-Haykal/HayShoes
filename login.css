@@ -1,5 +1,13 @@
+body {
+  background-image: url(https://i.pinimg.com/564x/1a/85/aa/1a85aac66c257cbb46fb716b300c0559.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+}
 .login {
-  background-color: #198754;
+  background-color: rgb(25, 135, 84, 0.6);
   color: white;
   padding: 45px;
   border-radius: 20px;
@@ -9,13 +17,27 @@
   margin-top: -50px;
   display: inline block;
   transition: all 0.3s ease-out;
+  box-shadow: white;
+  animation: shine 20 ease-out;
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: 0px 0px 10px white;
+  }
+  50% {
+    box-shadow: 0px 0px 20px white;
+  }
+  100% {
+    box-shadow: 0px 0px 10px white;
+  }
 }
 
 .login:focus {
-  background-color: #2b3035;
+  background-color: rgb(43, 48, 54, 0.5);
   color: white;
   box-shadow: 0px 0px 20px #2b3035;
-  animation: shine 2s ease-out;
+  animation: shine 210s ease-out;
 }
 
 @keyframes shine {
@@ -32,6 +54,7 @@
 
 .login h1 {
   text-align: center;
+  color: white;
 }
 
 form.form-login {
@@ -63,10 +86,10 @@ form.form-login {
   margin-top: 15px;
 }
 
-.form-login button:hover {
+/* .form-login button:hover {
   background-color: #198754;
   color: #fff;
-}
+} */
 
 .form-login a {
   color: white;
@@ -85,4 +108,8 @@ form.form-login {
   padding: 5px 10px;
   width: 300px;
   height: 35px;
+}
+
+.google {
+  width: 45px;
 }

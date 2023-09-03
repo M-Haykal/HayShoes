@@ -21,6 +21,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
   </head>
+
   <body class="o">
     <!-- Navbar -->
     <nav
@@ -28,9 +29,13 @@
       data-bs-theme="dark"
     >
       <div class="container-fluid">
-        <a class="navbar-brand mb-0 h1" href="#"
-          >HayShoes</a
-        >
+        <a
+          class="navbar-brand mb-0 h1 fw-bolder"
+          href="home.html"
+          data-toggle="tooltip"
+          data-placement="top"
+          >HayShoes
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,39 +48,129 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html"
+          <ul class="navbar-nav mx-auto mb-lg-0">
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" aria-current="page" href="home.html"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="login.html">Login</a>
+              <a class="nav-link disabled" href="login.html">Login</a>
+            </li> -->
+            <li class="nav-item fs-6">
+              <a
+                class="nav-link active"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasTop"
+                aria-controls="offcanvasTop"
+                >Pria</a
+              >
             </li>
-            
+            <li class="nav-item fs-6">
+              <a
+                class="nav-link active"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasTop"
+                aria-controls="offcanvasTop"
+                >Wanita</a
+              >
+            </li>
+            <li class="nav-item fs-6">
+              <a
+                class="nav-link active"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasTop"
+                aria-controls="offcanvasTop"
+                >Anak</a
+              >
+            </li>
           </ul>
           <div class="search-box">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button ctype="button" class="btn btn-light">
+            <form class="link d-flex" role="search">
+              <a class="text-white" href="login.html" title="Login"
+                ><i class="bi bi-person"></i>
+              </a>
+              <a class="text-white" href="" title="Keranjang"
+                ><i class="bi bi-bag"></i
+              ></a>
+              <a
+                class="text-white"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling"
+                aria-controls="offcanvasScrolling"
+              >
                 <i class="bi bi-search"></i>
-              </button>
-              <!-- <button type="button" class="btn btn-light me-2">
-                <i class="bi bi-cart2"></i>
-              </button>
-              <button type="button" class="btn btn-light">
-                <i class="bi bi-person"></i>
-              </button> -->
+              </a>
             </form>
           </div>
         </div>
       </div>
     </nav>
+
+    <!-- Modal Search -->
+    <div
+      class="offcanvas offcanvas-end"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      id="offcanvasScrolling"
+      aria-labelledby="offcanvasScrollingLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Cari</h5>
+        <button
+          type="button"
+          class="btn-close me-0"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-1"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            id="searchInput"
+          />
+          <button
+            class="btn btn-outline-success"
+            type="submit"
+            onclick="search()"
+          >
+            Search
+          </button>
+          <!-- <ul id="ssearchHistory">history</ul> -->
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal Kategori -->
+    <div
+      class="offcanvas offcanvas-top"
+      tabindex="-1"
+      data-bs-backdrop="false"
+      id="offcanvasTop"
+      aria-labelledby="offcanvasTopLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel">"Nama Kategori"</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla eos
+        praesentium deleniti amet consequatur dolorum nam qui inventore veniam
+        omnis, natus corrupti laboriosam quia ipsum tempora harum sapiente
+        excepturi suscipit.
+      </div>
+    </div>
 
     <!-- Iklan bergerak -->
     <div id="carouselExampleCaptions" class="carousel slide">
@@ -214,29 +309,42 @@
     </div>
 
     <!-- Koleksi Terbaru -->
-    <h1 class="text-white text-center my-3 mt-5">~ Koleksi Terbaru ~</h1>
+    <h1 class="text-white text-center my-3 mt-5">Produk populer</h1>
     <div class="container mb-5">
       <div class="row g-0">
-        <div class="card m-2 rounded-0 border-0" style="width: 16rem">
+        <div
+          class="card m-2 rounded-0 border-0"
+          style="width: 16rem"
+          data-bs-toggle="modal"
+          data-bs-target="#detailModal"
+        >
           <img
             src="https://i.pinimg.com/564x/5e/11/c6/5e11c6be5dd9160230f0b73ce51a4c43.jpg"
             class="card-img-top p-0 rounded-0"
             alt="Produk kami"
           />
           <div class="card-body">
-            <h5 class="card-title fw-bold">HS Elevate</h5>
-            <p class="card-text text-secondary fs-5">Rp 150.000</p>
-            <button
-              type="button"
-              class="btn btn-dark rounded-0"
-              data-bs-toggle="modal"
-              data-bs-target="#detailModal"
+            <h5 class="card-title fw-bold mb-0">HS Elevate</h5>
+            <p
+              class="card-text text-secondary text-decoration-line-through fs-5 mb-0"
             >
-              Detail
-            </button>
+              Rp 150.000
+            </p>
+            <div class="rating text-start">
+              <span class="star" onclick="rateProduct(1)">☆</span>
+              <span class="star" onclick="rateProduct(2)">☆</span>
+              <span class="star" onclick="rateProduct(3)">☆</span>
+              <span class="star" onclick="rateProduct(4)">☆</span>
+              <span class="star" onclick="rateProduct(5)">☆</span>
+            </div>
           </div>
         </div>
-        <div class="card m-2 rounded-0 border-0" style="width: 16rem">
+        <div
+          class="card m-2 rounded-0 border-0"
+          style="width: 16rem"
+          data-bs-toggle="modal"
+          data-bs-target="#detailModal"
+        >
           <img
             src="https://i.pinimg.com/236x/6a/18/50/6a18509b7ed6e6566502000cd0e632ce.jpg"
             class="card-img-top p-0 rounded-0"
@@ -244,18 +352,26 @@
           />
           <div class="card-body">
             <h5 class="card-title fw-bold">HS StrideFlex</h5>
-            <p class="card-text text-secondary fs-5">Rp 150.000</p>
-            <button
-              type="button"
-              class="btn btn-dark rounded-0"
-              data-bs-toggle="modal"
-              data-bs-target="#detailModal"
+            <p
+              class="card-text text-secondary text-decoration-line-through fs-5 mb-0"
             >
-              Detail
-            </button>
+              Rp 150.000
+            </p>
+            <div class="rating text-start">
+              <span class="star" onclick="rateProduct(1)">☆</span>
+              <span class="star" onclick="rateProduct(2)">☆</span>
+              <span class="star" onclick="rateProduct(3)">☆</span>
+              <span class="star" onclick="rateProduct(4)">☆</span>
+              <span class="star" onclick="rateProduct(5)">☆</span>
+            </div>
           </div>
         </div>
-        <div class="card m-2 rounded-0 border-0" style="width: 16rem">
+        <div
+          class="card m-2 rounded-0 border-0"
+          style="width: 16rem"
+          data-bs-toggle="modal"
+          data-bs-target="#detailModal"
+        >
           <img
             src="https://i.pinimg.com/236x/da/35/8e/da358e737fbf7566b5fd59a1129e84a2.jpg"
             class="card-img-top p-0 rounded-0"
@@ -263,18 +379,26 @@
           />
           <div class="card-body">
             <h5 class="card-title fw-bold">HS UrbanGlide</h5>
-            <p class="card-text text-secondary fs-5">Rp 150.000</p>
-            <button
-              type="button"
-              class="btn btn-dark rounded-0"
-              data-bs-toggle="modal"
-              data-bs-target="#detailModal"
+            <p
+              class="card-text text-secondary text-decoration-line-through fs-5 mb-0"
             >
-              Detail
-            </button>
+              Rp 150.000
+            </p>
+            <div class="rating text-start">
+              <span class="star" onclick="rateProduct(1)">☆</span>
+              <span class="star" onclick="rateProduct(2)">☆</span>
+              <span class="star" onclick="rateProduct(3)">☆</span>
+              <span class="star" onclick="rateProduct(4)">☆</span>
+              <span class="star" onclick="rateProduct(5)">☆</span>
+            </div>
           </div>
         </div>
-        <div class="card m-2 rounded-0 border-0" style="width: 16rem">
+        <div
+          class="card m-2 rounded-0 border-0"
+          style="width: 16rem"
+          data-bs-toggle="modal"
+          data-bs-target="#detailModal"
+        >
           <img
             src="https://i.pinimg.com/564x/7a/e5/61/7ae56133754f9ea1d6cc7ba9fb5e5fa1.jpg"
             class="card-img-top p-0 rounded-0"
@@ -282,22 +406,25 @@
           />
           <div class="card-body">
             <h5 class="card-title fw-bold">HS ComfortMax</h5>
-            <p class="card-text text-secondary fs-5">Rp 150.000</p>
-            <button
-              type="button"
-              class="btn btn-dark rounded-0"
-              data-bs-toggle="modal"
-              data-bs-target="#detailModal"
+            <p
+              class="card-text text-secondary text-decoration-line-through fs-5 mb-0"
             >
-              Detail
-            </button>
+              Rp 150.000
+            </p>
+            <div class="rating text-start">
+              <span class="star" onclick="rateProduct(1)">☆</span>
+              <span class="star" onclick="rateProduct(2)">☆</span>
+              <span class="star" onclick="rateProduct(3)">☆</span>
+              <span class="star" onclick="rateProduct(4)">☆</span>
+              <span class="star" onclick="rateProduct(5)">☆</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Kategori -->
-    <h1 class="text-white text-center my-3 mt-5 mb-4">~ Kategori ~</h1>
+    <!-- <h1 class="text-white text-center my-3 mt-5 mb-4">Kategori</h1>
     <div class="mx-3 row mb-5">
       <div class="col-4 card text-bg-dark border-0">
         <a href="">
@@ -342,7 +469,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Partner -->
     <div class="partner mb-5 container-md bg-white opacity-75 rounded">
@@ -428,7 +555,7 @@
       </a>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal deskripsi produk-->
     <div
       class="modal fade"
       id="detailModal"
@@ -455,7 +582,7 @@
               />
               <div class="ms-5 text-start">
                 <h2 class="fs-2">REEBOK TE WVN UL PNT MEN'S PANTS - BLACK</h2>
-
+                <span class="">Ukuran</span>
                 <div class="col-lg-2 d-flex flex-nowrap">
                   <div class="d-flex flex-grow-2">
                     <div class="form-check me-3">
@@ -561,31 +688,33 @@
           <div class="col-md-6">
             <div id="tentang" class="mb-2">
               <h3>Tentang Kami</h3>
-            <p>
-              Kami adalah toko sepatu terbesar di Indonesia. Kami menyediakan
-              berbagai macam jenis sepatu untuk berbagai kebutuhan.
-            </p>
+              <p>
+                Kami adalah toko sepatu terbesar di Indonesia. Kami menyediakan
+                berbagai macam jenis sepatu untuk berbagai kebutuhan.
+              </p>
             </div>
 
             <div id="ikuti">
-              <h3 class="mb-3 ">Ikuti Kami</h3>
-            <div class="d-flex">
-              <a
-              class="dropdown-item"
-              href="https://www.instagram.com/_mhmd_haykall/"
-              ><i class="bi bi-instagram fst-normal ms-3"></i> Instagram</a
-            >
+              <h3 class="mb-3">Ikuti Kami</h3>
+              <div class="d-flex">
+                <a
+                  class="dropdown-item"
+                  href="https://www.instagram.com/_mhmd_haykall/"
+                  ><i class="bi bi-instagram fst-normal ms-3"></i> Instagram</a
+                >
 
-            <a class="dropdown-item" href="https://twitter.com/Hekolll_?s=09"
-              ><i class="bi bi-twitter fst-normal ms-3"></i> Twitter</a
-            >
+                <a
+                  class="dropdown-item"
+                  href="https://twitter.com/Hekolll_?s=09"
+                  ><i class="bi bi-twitter fst-normal ms-3"></i> Twitter</a
+                >
 
-            <a
-              class="dropdown-item"
-              href="https://youtube.com/@muhammadhaykal9143"
-              ><i class="bi bi-youtube fst-normal ms-3"></i> Youtube</a
-            >
-            </div>
+                <a
+                  class="dropdown-item"
+                  href="https://youtube.com/@muhammadhaykal9143"
+                  ><i class="bi bi-youtube fst-normal ms-3"></i> Youtube</a
+                >
+              </div>
             </div>
           </div>
           <div class="col-md-6">
