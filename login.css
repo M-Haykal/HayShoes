@@ -1,4 +1,10 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Lobster+Two&family=Lumanosimo&family=Permanent+Marker&family=Russo+One&display=swap");
+
+.navbar-brand {
+  font-family: "Permanent Marker", cursive;
+}
+
+/* body {
   background-image: url(https://i.pinimg.com/564x/1a/85/aa/1a85aac66c257cbb46fb716b300c0559.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -86,11 +92,6 @@ form.form-login {
   margin-top: 15px;
 }
 
-/* .form-login button:hover {
-  background-color: #198754;
-  color: #fff;
-} */
-
 .form-login a {
   color: white;
   text-decoration: none;
@@ -112,4 +113,20 @@ form.form-login {
 
 .google {
   width: 45px;
+} */
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
 }
