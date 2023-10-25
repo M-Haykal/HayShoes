@@ -4,129 +4,20 @@
   font-family: "Permanent Marker", cursive;
 }
 
-/* body {
-  background-image: url(https://i.pinimg.com/564x/1a/85/aa/1a85aac66c257cbb46fb716b300c0559.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100%;
-}
-.login {
-  background-color: rgb(25, 135, 84, 0.6);
-  color: white;
-  padding: 45px;
-  border-radius: 20px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  margin-top: -50px;
-  display: inline block;
-  transition: all 0.3s ease-out;
-  box-shadow: white;
-  animation: shine 20 ease-out;
-}
-
-@keyframes shine {
-  0% {
-    box-shadow: 0px 0px 10px white;
-  }
-  50% {
-    box-shadow: 0px 0px 20px white;
-  }
-  100% {
-    box-shadow: 0px 0px 10px white;
-  }
-}
-
-.login:focus {
-  background-color: rgb(43, 48, 54, 0.5);
-  color: white;
-  box-shadow: 0px 0px 20px #2b3035;
-  animation: shine 210s ease-out;
-}
-
-@keyframes shine {
-  0% {
-    box-shadow: 0px 0px 10px #fff;
-  }
-  50% {
-    box-shadow: 0px 0px 20px #fff;
-  }
-  100% {
-    box-shadow: 0px 0px 10px #fff;
-  }
-}
-
-.login h1 {
-  text-align: center;
-  color: white;
-}
-
-form.form-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 40px;
-}
-
-.form-login button {
-  margin-top: 40px;
-  background: black;
-  color: white;
-  display: inline-block;
-  padding: 5px 20px;
-  transition: all 0.3s ease-out;
-}
-
-.form-login input,
-.form-login button {
-  width: 300px;
-  border: none;
-  border-radius: 20px;
-  height: 35px;
-}
-
-.form-login .password {
-  margin-top: 15px;
-}
-
-.form-login a {
-  color: white;
-  text-decoration: none;
-}
-
-.pesan {
-  color: #2b3035;
-}
-
-.btn-home {
-  border: none;
-  border-radius: 20px;
-  background-color: #2b3035;
-  color: #fff;
-  padding: 5px 10px;
-  width: 300px;
-  height: 35px;
-}
-
-.google {
-  width: 45px;
-} */
-
 .divider:after,
 .divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
 }
+
 .h-custom {
-height: calc(100% - 73px);
+  height: calc(100% - 73px);
 }
+
 @media (max-width: 450px) {
-.h-custom {
-height: 100%;
-}
+  .h-custom {
+    height: 100%;
+  }
 }
