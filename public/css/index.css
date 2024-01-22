@@ -109,7 +109,7 @@
 
 .container2 span {
   display: inline-block;
-  animation: twinkling 1s infinite;
+  animation: twinkling 9s infinite;
   transition: transform 0.3s ease-out;
   border-radius: 2px;
   border-radius: 5px;
@@ -143,6 +143,9 @@
 @media (max-width: 600px) {
   .container2 span {
     font-size: 3rem;
+  }
+  input[type="number"] {
+    width: 50px; /* Sesuaikan lebar sesuai kebutuhan Anda */
   }
 }
 

@@ -1,0 +1,18 @@
+/* .jumbotron {
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.button {
+  margin-top: 20px;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Lobster+Two&family=Lumanosimo&family=Permanent+Marker&family=Russo+One&display=swap");
+
+.navbar-brand {
+  font-family: "Permanent Marker", cursive;
+}

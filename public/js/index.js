@@ -56,3 +56,4 @@ const carousel = new bootstrap.Carousel("#carouselExampleCaptions");
 //   // Menghapus nilai input pencarian
 //   searchInput.value = "";
 // }
+

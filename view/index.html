@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HayShoes</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../public/css/index.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -49,14 +49,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-lg-0">
-            <!-- <li class="nav-item">
-              <a class="nav-link disabled" aria-current="page" href="home.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="login.html">Login</a>
-            </li> -->
             <li class="nav-item fs-6">
               <a
                 class="nav-link active"
@@ -87,8 +79,13 @@
           </ul>
           <div class="search-box">
             <form class="link d-flex" role="search">
-              <a class="btn text-white" href="login.php" title="Login"
-                ><i class="bbi bi-person"></i>
+              <a class="navbar-brand" href="#">
+                <img
+                  src="https://i.pinimg.com/236x/ad/73/1c/ad731cd0da0641bb16090f25778ef0fd.jpg"
+                  alt="Avatar Logo"
+                  style="width: 30px"
+                  class="rounded-pill"
+                />
               </a>
               <a
                 class="btn text-white"
@@ -578,101 +575,116 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="deskripsi container">
-            <div class="d-flex">
-              <img
-                src="https://i.pinimg.com/236x/c5/98/51/c59851af9c6f24a9248feb338f23e678.jpg"
-                alt=""
-                srcset=""
-              />
-              <div class="ms-5 text-start">
-                <h2 class="fs-2">REEBOK TE WVN UL PNT MEN'S PANTS - BLACK</h2>
-                <span class="">Ukuran</span>
-                <div class="col-lg-2 d-flex flex-nowrap">
-                  <div class="d-flex flex-grow-2">
-                    <div class="form-check me-3">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1"
-                      />
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        36
-                      </label>
+          <div class="deskripsi container text-center">
+            <div class="row">
+              <div class="col">
+                <div
+                  id="carouselExampleFade"
+                  class="carousel slide carousel-fade"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="" class="d-block w-100" alt="..." />
                     </div>
-                    <div class="form-check me-3">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault2"
-                        checked
-                      />
-                      <label class="form-check-label" for="flexRadioDefault2">
-                        38
-                      </label>
+                    <div class="carousel-item">
+                      <img src="" class="d-block w-100" alt="..." />
                     </div>
-                    <div class="form-check me-3">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1"
-                      />
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        39
-                      </label>
-                    </div>
-                    <div class="form-check me-3">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault2"
-                        checked
-                      />
-                      <label class="form-check-label" for="flexRadioDefault2">
-                        40
-                      </label>
+                    <div class="carousel-item">
+                      <img src="" class="d-block w-100" alt="..." />
                     </div>
                   </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
-                <div class="">
-                  <p>Jumlah</p>
-                  <input type="number" min="1" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="ms-5 text-start">
+                  <h2 class="fs-2">REEBOK TE WVN UL PNT MEN'S PANTS - BLACK</h2>
+                  <span class="">Ukuran</span>
+                  <div class="col-lg-2 d-flex flex-nowrap">
+                    <div class="d-flex flex-grow-2">
+                      <div class="form-check me-3">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          36
+                        </label>
+                      </div>
+                      <div class="form-check me-3">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault2"
+                          checked
+                        />
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          38
+                        </label>
+                      </div>
+                      <div class="form-check me-3">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          39
+                        </label>
+                      </div>
+                      <div class="form-check me-3">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault2"
+                          checked
+                        />
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          40
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <p>Jumlah</p>
+                    <input type="number" min="1" />
+                  </div>
+                  <span class="fs-3">Detail Produk</span>
+                  <p>-</p>
                 </div>
-                <span class="fs-3">Detail Produk</span>
-                <p>-</p>
               </div>
             </div>
           </div>
-          <div class="comments-container container">
-            <h2>Komentar</h2>
-            <form id="comment-form">
-              <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" />
-              </div>
-              <div>
-                <label for="comment">Komentar:</label>
-                <textarea id="comment" name="comment"></textarea>
-              </div>
-              <button type="submit">Kirim</button>
-            </form>
-            <ul id="comments-list"></ul>
-            <!-- <div class="product">
-            <div class="rating">
-              <span class="star" onclick="rateProduct(1)">☆</span>
-              <span class="star" onclick="rateProduct(2)">☆</span>
-              <span class="star" onclick="rateProduct(3)">☆</span>
-              <span class="star" onclick="rateProduct(4)">☆</span>
-              <span class="star" onclick="rateProduct(5)">☆</span>
-            </div>
-          </div> -->
-            <script src="index.js"></script>
-          </div>
-
           <!-- <div class="modal-body">...</div> -->
           <div class="modal-footer border-top-0">
             <button type="button" class="btn btn-secondary rounded-0">
@@ -695,7 +707,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
-        <div class="modal-content rounded-0 overflow-scroll">
+        <div class="modal-content rounded-0 overflow-scroll container-fluid">
           <div class="modal-header border-bottom-0">
             <label class="fw-bold fs-5" for="">Keranjang saya</label>
             <button
@@ -706,7 +718,7 @@
             ></button>
           </div>
           <div class="deskripsi">
-            <table class="table">
+            <table class="table container-fluid">
               <thead>
                 <tr>
                   <th scope="col">Pilih</th>
@@ -762,8 +774,11 @@
                   Semua
                 </label>
               </div>
+              <label class="text-white" for="">Harga:....</label>
               <div class="">
-                <button type="button" class="btn btn-outline-success">Success</button>
+                <button type="submit" class="btn btn-outline-success">
+                  Success
+                </button>
               </div>
             </div>
           </div>
@@ -819,7 +834,7 @@
       </div>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="../public/js/index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

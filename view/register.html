@@ -16,17 +16,29 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Lobster+Two&family=Lumanosimo&family=Permanent+Marker&family=Russo+One&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Lobster+Two&family=Lumanosimo&family=Permanent+Marker&family=Russo+One&display=swap");
+      body{
+        background-color: #212529;
+      }
       .card-img-left {
         width: 45%;
         /* Link to your background image using in the property below! */
         background: scroll center
-          url("https://source.unsplash.com/WEQbe2jBg40/414x512");
+          url("https://i.pinimg.com/564x/31/c1/8a/31c18a48c174048cca7426a7bc5e3d4b.jpg");
         background-size: cover;
       }
 
       .navbar-brand {
         font-family: "Permanent Marker", cursive;
+      }
+
+      ::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+      }
+
+      .element-dengan-overflow {
+        overflow-x: hidden;
       }
     </style>
     <title>Document</title>
@@ -48,15 +60,14 @@
               <!-- Background image for card set in CSS! -->
             </div>
             <div class="card-body p-4 p-sm-5">
-              <h5 class="card-title text-center mb-5 fw-light fs-5">
-                Register
-              </h5>
+              <h5 class="card-title text-center mb-5 fs-5">Register</h5>
               <form>
                 <div class="form-floating mb-3">
                   <input
                     type="text"
                     class="form-control"
                     id="floatingInputUsername"
+                    name="username"
                     placeholder="myusername"
                     required
                     autofocus
@@ -69,6 +80,7 @@
                     type="email"
                     class="form-control"
                     id="floatingInputEmail"
+                    name="email"
                     placeholder="name@example.com"
                   />
                   <label for="floatingInputEmail">Email address</label>
@@ -81,6 +93,7 @@
                     type="password"
                     class="form-control"
                     id="floatingPassword"
+                    name="password"
                     placeholder="Password"
                   />
                   <label for="floatingPassword">Password</label>
@@ -98,23 +111,24 @@
 
                 <div class="d-grid mb-2">
                   <button
-                    class="btn btn-lg btn-primary btn-login fw-bold text-uppercase"
+                    class="btn btn-lg btn-primary btn-login"
                     type="submit"
                   >
                     Register
                   </button>
                 </div>
 
-                <a class="d-block text-center mt-2 small" href="login.html"
-                  >Have an account? login</a
-                >
+                <p class="small fw-bold mt-2 pt-1 mb-0">
+                  have an account?
+                  <a href="register.html" class="link-primary">Login</a>
+                </p>
 
                 <hr class="my-4" />
 
                 <div class="d-flex justify-content-center">
                   <div class="d-grid bg-secondary me-2 rounded">
                     <button
-                      class="btn btn-lg btn-google btn-login fw-bold text-uppercase"
+                      class="btn btn-lg btn-google btn-login"
                       type="submit"
                     >
                       <i class="bi bi-google"></i>

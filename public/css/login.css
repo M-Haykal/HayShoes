@@ -4,6 +4,14 @@
   font-family: "Permanent Marker", cursive;
 }
 
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+.element-dengan-overflow {
+  overflow-x: hidden;
+}
 .divider:after,
 .divider:before {
   content: "";
