@@ -1,6 +1,4 @@
 # HayShoes
-UI HayShoes
-
 Kami sangat menyambut kontribusi dari komunitas! Jika Anda ingin berkontribusi, ikuti langkah-langkah berikut:
 
 1. Fork repositori ini.
