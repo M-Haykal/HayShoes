@@ -16,3 +16,12 @@
 .navbar-brand {
   font-family: "Permanent Marker", cursive;
 }
+
+body{
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
